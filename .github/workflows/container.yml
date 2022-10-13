@@ -1,4 +1,5 @@
-name: deploy-container
+- name: ACTIONS_ALLOW_UNSECURE_COMMANDS
+  run: echo 'ACTIONS_ALLOW_UNSECURE_COMMANDS=true' >> $GITHUB_ENV
 
 on: 
   push:
