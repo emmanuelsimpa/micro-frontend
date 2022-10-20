@@ -1,0 +1,14 @@
+import React, { useEffect, useRef } from 'react';
+import { mount as DashboardMount } from 'dashboard/DashboardApp';
+
+export default function DashboardApp({onSignIn: signIn}) {
+    const ref = useRef(null);
+
+    useEffect(()=> {
+      DashboardMount(ref.current)
+    }, [])
+
+  return (
+    <div ref={ref}/>
+  )
+}
